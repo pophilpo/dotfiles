@@ -1,58 +1,34 @@
-
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()		" required, all plugins must appear after this line.
+call vundle#begin()	
 
-Plugin 'gmarik/Vundle.vim'							" Vundle
-Plugin 'vim-airline/vim-airline'					" Airline
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
 Plugin 'rust-lang/rust.vim'
-Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
-Plugin 'scrooloose/nerdtree'						" added nerdtree
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'itmammoth/doorboy.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'jreybert/vimagit'
 Plugin 'severin-lemaignan/vim-minimap'
-Plugin 'vimwiki/vimwiki'                            " Vim wiki
+Plugin 'vimwiki/vimwiki'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'dracula/vim'
-Plugin 'ap/vim-css-color'                           " Color previews for CSS
-Plugin 'tpope/vim-surround'                         " Change surrounding marks
-"Plugin 'klen/python-mode'                          " Python Mode
+Plugin 'ap/vim-css-color'
+Plugin 'tpope/vim-surround'
 
-call vundle#end()		" required, all plugins must appear before this line.
 
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+call vundle#end()
 
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Remap Keys
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Remap ESC to ii
-:imap ii <Esc>
-"Disable arrow keys in Normal mode
+filetype plugin indent on 
 no <Up> <Nop>
 no <Down> <Nop>
 no <Left> <Nop>
 no <Right> <Nop>
-
-"Disable arrow keys in Insert mode
 ino <Up> <Nop>
 ino <Down> <Nop>
 ino <Left> <Nop>
@@ -61,15 +37,9 @@ ino <Right> <Nop>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Powerline
 set rtp+=/usr/share/powerline/bindings/vim/
-
-" Always show statusline
 set laststatus=2
-
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-" set t_Co=256
-
+set t_Co=256
 syntax on   
 set relativenumber
 let g:rehash256 = 1
@@ -80,27 +50,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='angr'
 
-" Uncomment to prevent non-normal modes showing in powerline and below powerline.
 set noshowmode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
 set expandtab
-
-" Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Uncomment to autostart the NERDTree
-" autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -113,9 +75,6 @@ let NERDTreeMinimalUI = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi LineNr ctermfg=24
 color dracula
-
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
