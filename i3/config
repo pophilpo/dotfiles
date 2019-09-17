@@ -182,10 +182,13 @@ colors {
 }
 
 exec --no-startup-id compton
+exec --no-startup-id i3-msg "workspace $workspace1; exec gnome-terminal"
+exec --no-startup-id i3-msg "workspace $workspace2; exec vivaldi-stable"
 exec_always feh --bg-scale /home/philipp/Pictures/background.jpg 
-exec_always "setxkbmap -layout us,ru"
-exec_always "setxkbmap -option 'grp:alt_shift_toggle'"
+exec_always --no-startup-id "setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
+
 assign [class="Vivaldi-stable"] $workspace2
 assign [class="TelegramDesktop"] $workspace3
 assign [class="discord"] $workspace3
+assign [class="Slack"] $workspace3
 bindsym $mod+l exec i3lock -i /home/philipp/Pictures/lockscreen.png
