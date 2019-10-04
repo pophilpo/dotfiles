@@ -20,6 +20,7 @@ Plug 'dracula/vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
+Plug 'sirver/ultisnips'
 call plug#end()
 
 
@@ -37,6 +38,10 @@ ino <Right> <Nop>
 syntax on   
 hi LineNr ctermfg=24
 
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/Snippets']
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:rehash256 = 1
 let g:Powerline_symbols='unicode'
 let g:Powerline_theme='long'
