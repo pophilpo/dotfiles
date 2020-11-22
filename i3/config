@@ -40,7 +40,7 @@ exec --no-startup-id volumeicon
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec "rofi -modi window,drun,ssh,combi -show-icons -sort -theme ~/.config/rofi/GreatI3.rasi -show combi"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
