@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
-# Завершить текущие экземпляры polybar
+## Add this to your wm startup file.
+
+# Terminate already running bar instances
 killall -q polybar
 
-# Ожидание полного завершения работы процессов
+# Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Запуск Polybar со стандартным расположением конфигурационного файла в ~/.config/polybar/config
-polybar bar &
-
-echo "Polybar загрузился..."
+# Launch bar1 and bar2
+polybar main -c ~/.config/polybar/config.ini &
