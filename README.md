@@ -1,8 +1,8 @@
 # My current dotfiles
 Yeah. I'm that kind of guy
 
-VsCode             |  Alacritty
+Neovim            |  Alacritty
 :-------------------------:|:-------------------------:
-![](./images/screenshots/vs_code.jpg)  |  ![](./images/screenshots/alacritty.jpg)
+![](./images/screenshots/nvim.jpg)  |  ![](./images/screenshots/alacritty.jpg)
 
 ![](./images/screenshots/desktop.jpg)
